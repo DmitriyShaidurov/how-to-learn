@@ -7,6 +7,14 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+p, h1, h2, h3 {
+margin: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 .header {
@@ -19,7 +27,8 @@
   position: relative;
   background-color: #f2f2f2;
   z-index: -2;
-  /* тут всё понятно */
+  margin-bottom: 100px;
+    /* тут всё понятно */
 }
 
 .header__logo {
@@ -40,6 +49,7 @@
   font-weight: bold;
   padding-left: 64px;
   width: 730px;
+  z-index: 4;
 } /*научиться учиться */
 
 .header__subtitle {
@@ -50,6 +60,7 @@ position: absolute;
 bottom: 30px;
 left: 64px;
 width: 388px;
+z-index: 5;
 } /* Какие современные */
 
 .header__link {
@@ -80,10 +91,147 @@ width: 388px;
   z-index: -1;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto 0;
+ }
+
+.description__brief {
+   width: 175px;
+  }
+
+.description__brief h3 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+   color:  #2f80ed;
+   margin: 0;
+}
+
+.description__main-text {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 80%;
+  min-width: 784px;
+}
+
+.description__main-text p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+
+.description__span-accent {
+  font-weight: bold;
+}
+
+
+.digits {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto 100px;
+  width: 1600px;
+  }
+
+  .digits__title {
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 60%;
+  }
+
+.digits__subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 60%;
+}
+
+.table {
+  margin: 0 auto 100px;
+  width: 100%;
+  padding-top: 60px;
+ }
+
+.cell {
+  width: 250px;
+}
+
+.heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
-}
+} /* и элемента с модификатором вида ключ-значение */
