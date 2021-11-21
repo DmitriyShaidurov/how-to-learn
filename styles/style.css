@@ -16,19 +16,68 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: blue;
-  /* выше установили ограничения для секции */
+  position: relative;
+  background-color: #f2f2f2;
+  z-index: -2;
+  /* тут всё понятно */
 }
+
+.header__logo {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 2;
+} /* Картинка заголовка яндекс практикум */
+
+.logo {
+  width: 183px;
+  height: 32px;
+} /* размеры яндекс практикума */
 
 .header__title {
   font-size: 102px;
   line-height: 96px;
+  font-weight: bold;
   padding-left: 64px;
-}
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+  width: 730px;
+} /*научиться учиться */
+
+.header__subtitle {
+line-height: 25px;
+font-size: 18px;
+font-weight: normal;
+position: absolute;
+bottom: 30px;
+left: 64px;
+width: 388px;
+} /* Какие современные */
+
+.header__link {
+  color: #2f80ed;
+} /*узнать */
+
+.header__main-illustration {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+} /* хмурая семейка */
+
+.subtitle-image {
+  width: 765px;
+  height: 608px;
+ } /* размеры хмурой семейки */
+
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  z-index: -1;
 }
 
 /* и элемента с модификатором вида ключ-значение */
