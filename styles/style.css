@@ -13,9 +13,18 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: blue;
   /* выше установили ограничения для секции */
 }
 
+.header__title {
+  font-size: 102px;
+  line-height: 96px;
+  padding-left: 64px;
+}
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
