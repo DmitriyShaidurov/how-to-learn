@@ -12,12 +12,17 @@
 p,
 h1,
 h2,
-h3 {
+h3
+ {
     margin: 0;
 }
 
 ul {
     list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header {
@@ -36,7 +41,7 @@ ul {
 
 /* блок header */
 
-.header__title_logo {
+.logo__place_header {
     position: absolute;
     top: 30px;
     left: 64px;
@@ -108,21 +113,21 @@ ul {
 
 /* Заливка синяя */
 
-.description {
+.two-columns {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto 0;
 }
 
-.description__brief {
+.two-columns__brief {
     width: 175px;
 }
 
 
 /* ширина блока */
 
-.description__brief h2 {
+.two-columns__brief h2 {
     font-size: 18px;
     font-weight: normal;
     line-height: 1.2;
@@ -133,7 +138,7 @@ ul {
 
 /* шрифт для блока brief */
 
-.description__main-text {
+.two-columns__main-text {
     width: 80%;
     min-width: 784px;
 }
@@ -141,7 +146,7 @@ ul {
 
 /* текст дискрипшн */
 
-.description__paragraph {
+.two-columns__paragraph {
     line-height: 34px;
     font-size: 24px;
     font-weight: normal;
@@ -150,14 +155,14 @@ ul {
 
 /* шрифты */
 
-.description__main-text p:not(:last-child) {
+.two-columns__main-text p:not(:last-child) {
     margin-bottom: 30px;
 }
 
 
 /* нижний отступ кроме последнего, не нашёл другой способ, буду признателен если подскажешь как сделать проще */
 
-.description__span-accent {
+.two-columns__span-accent {
     font-weight: bold;
 }
 
@@ -175,7 +180,7 @@ ul {
 
 /* Блок digits */
 
-.digits__title {
+.section__title {
     line-height: 1.15;
     font-size: 60px;
     font-weight: bold;
@@ -187,7 +192,7 @@ ul {
 
 /* заголовок дигитс */
 
-.digits__subtitle {
+.section__subtitle {
     line-height: 34px;
     font-size: 24px;
     font-weight: normal;
@@ -198,11 +203,11 @@ ul {
 
 /* про учёбу и мозг */
 
-.digits__table {
+.table {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: auto;
     width: 1100px;
     flex-wrap: wrap;
     padding: 0;
@@ -211,25 +216,27 @@ ul {
 
 /* параметры таблицы */
 
-.digits__cell {
+.table__cell {
     width: 250px;
     list-style: none;
     margin-top: 60px;
+
 }
 
 
 /* блоки таблицы */
 
-.digits__heading {
+.table__heading {
     line-height: 1.15;
     font-size: 24px;
     font-weight: bold;
+    /* margin: 0; */
 }
 
 
 /* заголовки таблицы */
 
-.digits__text {
+.table__text {
     line-height: 1.2;
     font-size: 18px;
     font-weight: normal;
@@ -244,71 +251,63 @@ ul {
     position: relative;
     height: 890px;
     justify-content: center;
-    /*  align-items: center; */
+     align-items: center;
     background-color: #f2f2f2;
-    z-index: -1;
+    z-index: 1;
 }
 
 
 /* блок фейнман */
 
-.feynman__title-subtitle {
+
+
+.feynman__title {
     position: absolute;
     top: 100px;
     width: 648px;
     text-align: center;
     margin: 0;
-    z-index: 2;
-}
-
-
-/* заголовки фейнман */
-
-.feynman__title-subtitle h2 {
     font-size: 120px;
     font-weight: bold;
     line-height: 1.15;
+    z-index: 3;
 }
 
+/* заголовки фейнман */
 
-/* параметры для h2 */
-
-.feynman__title-subtitle h3 {
+.feynman__title-subtitle {
+    text-align: center;
+    margin: 0;
+    z-index: 3;
+    text-align: center;
     font-size: 36px;
     font-weight: normal;
     line-height: 51px;
     margin-top: 70px;
-}
+  }
 
 
-/* параметры для h3 */
+/* выучить и забыть */
 
 .feynman__link {
     position: absolute;
     right: 48px;
-    /* align-items: center; */
     top: 50%;
-    z-index: 2;
-}
-
-
-/* гиперссылка фейнман */
-
-.feynman__link a {
+    z-index: 3;
     font-size: 36px;
     font-weight: normal;
     line-height: 51px;
     color: #2f80ed;
 }
 
+/* гиперссылка фейнман */
 
-/* параметры для текста <a> */
 
 .feynman__image {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -321,41 +320,58 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: -2;
+    z-index: 1;
     overflow: hidden;
     padding-bottom: 90px;
+
 }
 
 
 /* непосредственно блок */
 
-.kaufman__section-title_theme_dark {
+.kaufman__triangle {
+  background-image: url('../images/kaufman-triangle.svg');
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  right: -210px;
+  top: 0;
+  z-index: 2;
+  margin: 0;
+}
+
+.section-title {
     width: 60%;
     margin: 90px 0 20px;
     text-align: center;
-    color: white;
-    line-height: 1.15;
     font-size: 60px;
     font-weight: bold;
+    z-index: 3;
+    line-height: 1.15;
 }
 
+.section-title_theme_dark {
+   color: white;
+  }
 
-/* заголовок h2  */
 
-.kaufman__section-subtitle_theme_dark {
+.section-subtitle {
     width: 60%;
     margin: 0;
     text-align: center;
-    color: white;
     line-height: 34px;
     font-size: 24px;
     font-weight: normal;
+    z-index: 3;
 }
 
+.section-subtitle_theme_dark {
+  color: white;
+}
 
 /* заголовок h3 */
 
-.kaufman__table_theme_dark {
+.table_theme_dark {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -363,12 +379,13 @@ ul {
     width: 1100px;
     flex-wrap: wrap;
     padding: 0;
+    z-index: 3;
 }
 
 
 /* table kaufman */
 
-.kaufman__cell {
+.table__cell_theme_dark {
     width: 200px;
     margin-top: 80px;
 }
@@ -376,7 +393,7 @@ ul {
 
 /* параметры списка */
 
-.kaufman__heading {
+.table__heading_theme_dark {
     line-height: 1.15;
     font-size: 24px;
     font-weight: bold;
@@ -387,7 +404,7 @@ ul {
 
 /* параметры заголовка в списках */
 
-.kaufman__text {
+.table__text_theme_dark {
     line-height: 1.2;
     font-size: 18px;
     font-weight: normal;
@@ -396,18 +413,6 @@ ul {
 
 
 /* параметры текста в списках */
-
-.kaufman__logo {
-    position: absolute;
-    width: 877px;
-    height: 877px;
-    right: -210px;
-    top: 0;
-    z-index: -1;
-}
-
-
-/* треугольник  */
 
 .footer {
     padding-top: 60px;
@@ -424,6 +429,7 @@ ul {
     min-height: 350px;
     padding-top: 60px;
     padding-bottom: 40px;
+    margin: 0 auto 0;
 }
 
 
@@ -437,7 +443,7 @@ ul {
 
 /* параметры бокса */
 
-.footer__logo_place {
+.logo_place_footer {
     width: 183px;
     height: 35px;
     margin: 0;
