@@ -24,14 +24,16 @@
 
 
 /* блок header */
+.logo {
+  width: 183px;
+  height: 32px;
+}
 
 .logo__place_header {
   position: absolute;
   top: 30px;
   left: 64px;
   z-index: 2;
-  width: 183px;
-  height: 32px;
 }
 
 
@@ -196,6 +198,7 @@
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 
 
@@ -308,8 +311,6 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  height: 877px;
-  box-sizing: border-box;
 }
 
 
@@ -328,7 +329,7 @@
 
 .section-title_theme_dark {
   color: white;
-  margin: 90px 0 0;
+  margin: 90px 0 20px;
 }
 
 .section-subtitle_theme_dark {
@@ -376,9 +377,9 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  min-height: 350px;
+  min-height: 350px;/*
   padding-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 40px; */
   margin: 0 auto 0;
   box-sizing: border-box;
 }
@@ -392,13 +393,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
+  color: white;
+ }
 
-
+.footer__column {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  }
 /* параметры бокса */
 
 .logo_place_footer {
-  width: 183px;
   height: 35px;
   margin: 0;
 }
@@ -409,7 +413,6 @@
 .footer__author {
   margin: 18px 0 18px;
   bottom: 0px;
-  color: white;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -418,12 +421,15 @@
 
 /* параметры автора */
 
+.footer__column_content_info {
+  color: white;
+}
+
 .footer__column-heading {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
   text-align: left;
-  color: white;
   margin: 0;
 }
 
@@ -443,11 +449,26 @@
 
 /* h3 главная */
 
+.footer__column_content_social {
+  color: white;
+}
+
+
+
 .footer__column-links {
   padding: 20px 0 16px;
   margin: 0;
   list-style: none;
+  color: white;
 }
 
 
 /* ссылки на контакты */
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 10px;
+}
+
