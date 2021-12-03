@@ -1,7 +1,9 @@
 .digits {
   display: flex;
-  margin: 100px auto 100px;
+  margin: 0 auto 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  padding: 100px 0 100px;
 }
